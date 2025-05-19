@@ -32,3 +32,19 @@ if(is_first_col_0):
         matrix[j][0]=0
 print(matrix)
     
+
+matrix=[[1,0,2],[2,4,5],[5,0,7]]
+rows=len(matrix)
+cols=len(matrix[0])
+rowHasZero=[False]*rows
+colHasZero=[False]*cols
+for i in range(rows):
+    for j in range(cols):
+        if matrix[i][j]==0:
+            rowHasZero[i]=True
+            colHasZero[j]=True
+for i in range(rows):
+    for j in range(cols):
+        if rowHasZero[i] or colHasZero[j]:
+            matrix[i][j]=0
+print(matrix)
